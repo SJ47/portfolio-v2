@@ -40,7 +40,7 @@ const WhoIAm = () => {
                             <a
                                 href="https://codeclan.com/courses/professional-software-development/"
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noreferrer noopener"
                             >
                                 <em>CodeClan</em>
                             </a>{" "}

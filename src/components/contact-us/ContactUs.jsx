@@ -5,8 +5,7 @@ import {
     StyledMessageOnSubmit,
     StyledSubmitButton,
 } from "./ContactUs.styled";
-import SendIcon from "@mui/icons-material/Send";
-import { Box } from "@mui/system";
+// import SendIcon from "@mui/icons-material/Send";
 
 const encode = (data) => {
     return Object.keys(data)
@@ -18,7 +17,6 @@ const encode = (data) => {
 
 const ContactUs = ({ handleMessageSentStatus }) => {
     const [message, setMessage] = useState("");
-    // const [dataValid, setDataValid] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -36,12 +34,8 @@ const ContactUs = ({ handleMessageSentStatus }) => {
 
         try {
             let response = await fetch("/", {
-                // headers: {
-                //     "Content-Type": "application/json",
-                // },
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 method: "POST",
-                // body: JSON.stringify(formData),
                 body: encode({
                     "form-name": "contact-form",
                     ...formData,
@@ -53,10 +47,8 @@ const ContactUs = ({ handleMessageSentStatus }) => {
                 setMessage(
                     `Failed to send message. ${data.errors[0].msg} in ${data.errors[0].param}.  Please try again.`
                 );
-                // setDataValid(false);
             } else {
                 setMessage("Thank you, your message was successfully sent");
-                // setDataValid(true);
                 setFormData({
                     name: "",
                     email: "",
@@ -64,7 +56,6 @@ const ContactUs = ({ handleMessageSentStatus }) => {
                 });
             }
         } catch (error) {
-            // setDataValid(false);
             alert(error);
         }
     };
@@ -83,8 +74,6 @@ const ContactUs = ({ handleMessageSentStatus }) => {
                 >
                     Contact
                 </StyledH2>
-                {/* <p>I am looking forward to your message</p> */}
-                {/* <Box> */}
                 <form
                     name="contact-form"
                     // method="post"
@@ -132,10 +121,8 @@ const ContactUs = ({ handleMessageSentStatus }) => {
                         required
                         maxLength="1000" // minLength not supported in textArea
                     ></textarea>
-                    {/* <Box sx={{ display: "flex", flexDirection: "row" }}> */}
                     <StyledSubmitButton
                         type="submit"
-                        // dataValid={dataValid}
                         value="SEND"
                         sx={{
                             bgcolor: "primary.main",
@@ -144,7 +131,6 @@ const ContactUs = ({ handleMessageSentStatus }) => {
                     />
                     {/* <SendIcon /> */}
                 </form>
-                {/* </Box> */}
 
                 <StyledMessageOnSubmit message={message}>
                     {message}

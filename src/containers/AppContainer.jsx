@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Switch as RouterSwitch, Route } from "react-router-dom"; // Routes replaces Switch in ver.6
+// import { Switch as RouterSwitch, Route } from "react-router-dom"; // Routes replaces Switch in ver.6
 import introImage from "../assets/images/sj-photo.png";
 import Header from "../components/header/Header";
 import Intro from "../components/intro/Intro";
