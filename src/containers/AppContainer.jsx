@@ -10,7 +10,7 @@ import Footer from "../components/footer/Footer";
 import ScrollToTop from "../components/scrolltotop/ScrollToTop";
 import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-
+import Success from "../components/success/Success";
 import StyledContainer from "../components/container/Container";
 
 import projectData from "../assets/data/data.json";
@@ -37,17 +37,20 @@ const AppContainer = ({ handleThemeSwitch, theme }) => {
                 menuItem={menuItem}
             />
             <StyledContainer>
-                <RouterSwitch>
-                    <Route exact path="/">
-                        <Intro theme={theme} introImage={introImage} />
-                        <WhatIDo />
-                        <WhoIAm />
-                        <Projects theme={theme} projectData={projectData} />
-                    </Route>
-                </RouterSwitch>
-                <Footer introImage={introImage} />
-                {/* {!messageSent} ? <Footer introImage={introImage} /> :{" "}
-                <Success handleMessageSentStatus={handleMessageSentStatus} /> */}
+                {/* <RouterSwitch> */}
+                {/* <Route exact path="/"> */}
+                <Intro theme={theme} introImage={introImage} />
+                <WhatIDo />
+                <WhoIAm />
+                <Projects theme={theme} projectData={projectData} />
+                {/* </Route> */}
+                {/* </RouterSwitch> */}
+                <Footer
+                    introImage={introImage}
+                    handleMessageSentStatus={handleMessageSentStatus}
+                />
+                {messageSent && <Success />}
+
                 <ScrollToTop>
                     <Fab
                         color="secondary"

@@ -16,7 +16,7 @@ import { Box } from "@mui/system";
 import { Divider, Typography } from "@mui/material";
 import { Container } from "@mui/material";
 import { StyledImage } from "./Footer.styled";
-const Footer = ({ introImage }) => {
+const Footer = ({ introImage, handleMessageSentStatus }) => {
     return (
         <>
             <StyledFooterContainer
@@ -187,7 +187,9 @@ const Footer = ({ introImage }) => {
                             minWidth: "10px",
                         }}
                     >
-                        <ContactUs />
+                        <ContactUs
+                            handleMessageSentStatus={handleMessageSentStatus}
+                        />
                     </Box>
                 </Box>
             </StyledFooterContainer>
