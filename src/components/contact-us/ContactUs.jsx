@@ -30,33 +30,42 @@ const ContactUs = ({ handleMessageSentStatus }) => {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         setMessage("");
-        // setDataValid(false);
 
         try {
-            let response = await fetch("/", {
+            await fetch("/", {
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 method: "POST",
                 body: encode({
                     "form-name": "contact-form",
                     ...formData,
                 }),
-            });
-            const data = await response.json();
-
-            if (response.statusText !== "OK") {
-                setMessage(
-                    `Failed to send message. ${data.errors[0].msg} in ${data.errors[0].param}.  Please try again.`
-                );
-            } else {
-                setMessage("Thank you, your message was successfully sent");
+            }).then(() => {
+                setMessage("Thank you!  Your message was successfully sent.");
                 setFormData({
                     name: "",
                     email: "",
                     message: "",
                 });
-            }
+            });
+
+            // const data = await response.json();
+            // if (response.statusText !== "OK") {
+            //     setMessage(
+            //         `Failed to send message. ${data.errors[0].msg} in ${data.errors[0].param}.  Please try again.`
+            //     );
+            // } else {
+            //     setMessage("Thank you!  Your message was successfully sent.");
+            //     setFormData({
+            //         name: "",
+            //         email: "",
+            //         message: "",
+            //     });
+            // }
         } catch (error) {
-            alert(error);
+            setMessage(
+                `Failed to send message with error: ${error}.  Please try again.`
+            );
+            // alert(error);
         }
     };
 
