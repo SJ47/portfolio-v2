@@ -5,12 +5,18 @@ import {
     StyledMessageOnSubmit,
     StyledSubmitButton,
 } from "./ContactUs.styled";
-import SendIcon from "@mui/icons-material/Send";
-import { Box } from "@mui/system";
+// import SendIcon from "@mui/icons-material/Send";
 
-const ContactUs = () => {
+const encode = (data) => {
+    return Object.keys(data)
+        .map(
+            (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&");
+};
+
+const ContactUs = ({ handleMessageSentStatus }) => {
     const [message, setMessage] = useState("");
-    const [dataValid, setDataValid] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -24,15 +30,16 @@ const ContactUs = () => {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         setMessage("");
-        setDataValid(false);
+        // setDataValid(false);
 
         try {
-            let response = await fetch("http://localhost:5001/contact-us/", {
-                headers: {
-                    "Content-Type": "application/json",
-                },
+            let response = await fetch("/", {
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 method: "POST",
-                body: JSON.stringify(formData),
+                body: encode({
+                    "form-name": "contact-form",
+                    ...formData,
+                }),
             });
             const data = await response.json();
 
@@ -40,10 +47,8 @@ const ContactUs = () => {
                 setMessage(
                     `Failed to send message. ${data.errors[0].msg} in ${data.errors[0].param}.  Please try again.`
                 );
-                setDataValid(false);
             } else {
                 setMessage("Thank you, your message was successfully sent");
-                setDataValid(true);
                 setFormData({
                     name: "",
                     email: "",
@@ -51,7 +56,6 @@ const ContactUs = () => {
                 });
             }
         } catch (error) {
-            setDataValid(false);
             alert(error);
         }
     };
@@ -70,12 +74,10 @@ const ContactUs = () => {
                 >
                     Contact
                 </StyledH2>
-                {/* <p>I am looking forward to your message</p> */}
-                {/* <Box> */}
                 <form
                     name="contact-form"
-                    method="post"
-                    // onSubmit={handleFormSubmit}
+                    // method="post"
+                    onSubmit={handleFormSubmit}
                     style={{ margin: "1em 1em 0 0" }}
                 >
                     <input type="hidden" name="form-name" value="contact-form" />{" "}
@@ -119,10 +121,8 @@ const ContactUs = () => {
                         required
                         maxLength="1000" // minLength not supported in textArea
                     ></textarea>
-                    {/* <Box sx={{ display: "flex", flexDirection: "row" }}> */}
                     <StyledSubmitButton
                         type="submit"
-                        dataValid={dataValid}
                         value="SEND"
                         sx={{
                             bgcolor: "primary.main",
@@ -131,9 +131,8 @@ const ContactUs = () => {
                     />
                     {/* <SendIcon /> */}
                 </form>
-                {/* </Box> */}
 
-                <StyledMessageOnSubmit dataValid={dataValid} message={message}>
+                <StyledMessageOnSubmit message={message}>
                     {message}
                 </StyledMessageOnSubmit>
             </StyledContactUsContainer>

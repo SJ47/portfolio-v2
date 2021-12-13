@@ -13,10 +13,9 @@ import Tooltip from "@mui/material/Tooltip";
 import { StyledFooterContainer } from "../container/Container";
 import ContactUs from "../contact-us/ContactUs";
 import { Box } from "@mui/system";
-import { Divider, Typography } from "@mui/material";
-import { Container } from "@mui/material";
+import { Typography } from "@mui/material";
 import { StyledImage } from "./Footer.styled";
-const Footer = ({ introImage }) => {
+const Footer = ({ introImage, handleMessageSentStatus }) => {
     return (
         <>
             <StyledFooterContainer
@@ -175,9 +174,6 @@ const Footer = ({ introImage }) => {
                                 height: { md: "100px", xs: "75px" },
                             }}
                         />
-                        {/* <StyledAuthor>
-                            <em className="footer-by-text">by Scott Johnston</em>
-                        </StyledAuthor> */}
                     </Box>
                     <Box
                         sx={{
@@ -187,7 +183,9 @@ const Footer = ({ introImage }) => {
                             minWidth: "10px",
                         }}
                     >
-                        <ContactUs />
+                        <ContactUs
+                            handleMessageSentStatus={handleMessageSentStatus}
+                        />
                     </Box>
                 </Box>
             </StyledFooterContainer>

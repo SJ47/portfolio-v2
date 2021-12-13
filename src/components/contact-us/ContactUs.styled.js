@@ -1,7 +1,6 @@
 import { styled } from "@mui/system";
 
 export const StyledContactUsContainer = styled("div")`
-    /* height: 50vh; */
     min-width: 200px;
     max-width: 800px;
     margin: 0 auto;
@@ -13,10 +12,6 @@ export const StyledContactUsContainer = styled("div")`
         font-size: 1.2rem;
         margin-bottom: 0em;
     }
-
-    /* h1 {
-        color: ${props => props.theme.palette.primary.main};
-    } */
 
     form {
         display: flex;
@@ -50,20 +45,18 @@ export const StyledContactUsContainer = styled("div")`
 `;
 
 export const StyledMessageOnSubmit = styled("div")`
-    color: ${(props => props.dataValid ? "green" : "red")};
+    color: ${(props => props.theme.palette.primary.main)};
     display: ${(props => props.message === "" ? "none" : "block")};
     text-align: center;
     padding-top: 1em;
+    padding-bottom: 1em;
 `;
 
 export const StyledSubmitButton = styled("input")`
         margin-top: 1.5em;
-        /* color: red; */
         border: none;
-        /* background: white; */
         border: 2px solid red;
         font-weight: bold;
-        /* font-size: 1.2rem; */
         display: ${(props => props.dataValid ? "none" : "block")};
         margin-bottom: 2em;
 
