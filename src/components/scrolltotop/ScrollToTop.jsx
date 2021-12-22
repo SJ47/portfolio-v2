@@ -15,12 +15,10 @@ const ScrollToTop = (props) => {
             "#back-to-top-anchor"
         );
 
-        // if (anchor) {
         anchor.scrollIntoView({
             behavior: "smooth",
             block: "end",
         });
-        // }
     };
 
     return (

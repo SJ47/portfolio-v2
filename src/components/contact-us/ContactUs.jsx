@@ -5,7 +5,6 @@ import {
     StyledMessageOnSubmit,
     StyledSubmitButton,
 } from "./ContactUs.styled";
-// import SendIcon from "@mui/icons-material/Send";
 
 const encode = (data) => {
     return Object.keys(data)
@@ -47,25 +46,10 @@ const ContactUs = ({ handleMessageSentStatus }) => {
                     message: "",
                 });
             });
-
-            // const data = await response.json();
-            // if (response.statusText !== "OK") {
-            //     setMessage(
-            //         `Failed to send message. ${data.errors[0].msg} in ${data.errors[0].param}.  Please try again.`
-            //     );
-            // } else {
-            //     setMessage("Thank you!  Your message was successfully sent.");
-            //     setFormData({
-            //         name: "",
-            //         email: "",
-            //         message: "",
-            //     });
-            // }
         } catch (error) {
             setMessage(
                 `Failed to send message with error: ${error}.  Please try again.`
             );
-            // alert(error);
         }
     };
 
@@ -85,7 +69,6 @@ const ContactUs = ({ handleMessageSentStatus }) => {
                 </StyledH2>
                 <form
                     name="contact-form"
-                    // method="post"
                     onSubmit={handleFormSubmit}
                     style={{ margin: "1em 1em 0 0" }}
                 >
@@ -138,7 +121,6 @@ const ContactUs = ({ handleMessageSentStatus }) => {
                             color: "primary.contrastText",
                         }}
                     />
-                    {/* <SendIcon /> */}
                 </form>
 
                 <StyledMessageOnSubmit message={message}>

@@ -25,13 +25,11 @@ export const StyledParagraph = styled(Box)`
         border-bottom: 4px solid ${props => props.theme.palette.primary.main};
     }
     
-    
     // Desktop view
     ${props => props.theme.breakpoints.up("sm")}{
         top: -25px;
         margin-left: .75em;
         font-weight: normal;
-        /* padding: 1em 3em 0 3em; */
     }
 
     // First type of highlighted background
@@ -53,8 +51,5 @@ export const StyledAuthor = styled(Box)`
 `;
 
 export const StyledImage = styled("img")`
-    /* height: 100px;
-    position: relative;
-    left: -110px;
-    top: 30px; */
+
 `;

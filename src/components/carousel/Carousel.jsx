@@ -48,8 +48,6 @@ const responsive = {
 
 // Function component
 const Carousel = ({ projectData, theme }) => {
-    // const numberOfProjects = projectData.length;
-
     const [expanded, setExpanded] = useState([]);
 
     const handleExpandClick = (index) => {
@@ -214,7 +212,6 @@ const Carousel = ({ projectData, theme }) => {
                             <Button
                                 size="small"
                                 variant="text"
-                                // onClick={handleFlipCard} // Front card now moving to back
                                 onClick={() => {
                                     handleFlipCard(project.id);
                                 }}
@@ -287,10 +284,8 @@ const Carousel = ({ projectData, theme }) => {
                         </CardContent>
                     </Collapse>
                 </Card>
-                {/*  */}
-                {/* BACK OF CARD  */}
-                {/*  */}
 
+                {/* BACK OF CARD  */}
                 <Card
                     key={project.id}
                     sx={{
@@ -420,10 +415,8 @@ const Carousel = ({ projectData, theme }) => {
 
                     <Dialog
                         open={open[project.id] ? open[project.id] : false}
-                        // onClose={() => handleClose(project.id)}
                         sx={{
                             bgcolor: "transparent",
-                            // opacity: 0.5,
                         }}
                     >
                         <DialogTitle>{project.projectTitle}</DialogTitle>

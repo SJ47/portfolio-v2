@@ -28,7 +28,6 @@ const WhatIDo = () => {
                     textAlign={{ xs: "center" }}
                 >
                     <Box>
-                        {/* <h2 style={{ marginBottom: "0", marginRight: "0em" }}> */}
                         <Button
                             variant="contained"
                             sx={{
@@ -36,13 +35,11 @@ const WhatIDo = () => {
                                 border: "none",
                                 opacity: 0.7,
                                 borderRadius: "0px",
-                                // color: "palette.background.default",
                             }}
                         >
                             Front-End Development
                         </Button>
                         <StyledBox>&nbsp;</StyledBox>
-                        {/* </h2> */}
                         <StyledParagraph>
                             Experience working with HTML, CSS, JavaScript, React
                             and Leaflet.js library. Integrating and hosting on
@@ -50,12 +47,6 @@ const WhatIDo = () => {
                         </StyledParagraph>
                     </Box>
                     <Box>
-                        {/* <h2
-                            style={{
-                                marginBottom: "0",
-                                marginRight: "0em",
-                            }}
-                        > */}
                         <Button
                             variant="contained"
                             sx={{
@@ -63,14 +54,11 @@ const WhatIDo = () => {
                                 border: "none",
                                 opacity: 0.75,
                                 borderRadius: "0px",
-                                // color: "palette.background.default",
-                                // color: "${props => props.theme.palette.grey[900]}",
                             }}
                         >
                             Back-End Development
                         </Button>
                         <StyledBox>&nbsp;</StyledBox>
-                        {/* </h2> */}
                         <StyledParagraph>
                             Experience working with Java, Spring, Python, Flask,
                             Node Express, PostgreSQL, MongoDB and API Fetch.
@@ -80,7 +68,6 @@ const WhatIDo = () => {
                     </Box>
 
                     <Box>
-                        {/* <h2 style={{ marginBottom: "0", marginRight: "0em" }}> */}
                         <Button
                             variant="contained"
                             sx={{
@@ -88,13 +75,11 @@ const WhatIDo = () => {
                                 border: "none",
                                 opacity: 0.75,
                                 borderRadius: "0px",
-                                // color: "palette.text.primary",
                             }}
                         >
                             IT Management & Support
                         </Button>
                         <StyledBox>&nbsp;</StyledBox>
-                        {/* </h2> */}
                         <StyledParagraph>
                             Over 20 years IT Management experience, servicing the
                             IT infrastructure and support needs of regional sites

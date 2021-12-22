@@ -1,6 +1,5 @@
 import { useMediaQuery } from "@mui/material";
 import React from "react";
-// import introImage from "../../assets/images/sj-photo.png";
 import { StyledImage, StyledParagraph, StyledH1 } from "./Intro.styled";
 
 import { StyledIntroContainer } from "../container/Container";

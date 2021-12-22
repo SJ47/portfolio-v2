@@ -29,7 +29,6 @@ export const StyledParagraph = styled(Box)`
     // Desktop view
     ${props => props.theme.breakpoints.up("sm")}{
         margin: .5em 0em .5em 0em;
-
         top: -25px;
         margin-left: .75em;
         font-weight: normal;

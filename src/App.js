@@ -4,7 +4,6 @@ import "./App.css";
 import CssBaseline from "@mui/material/CssBaseline";
 import AppContainer from "./containers/AppContainer";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-// import GlobalStyles from "@mui/material/GlobalStyles";
 
 const darkTheme = createTheme({
   palette: {

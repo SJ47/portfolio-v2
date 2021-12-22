@@ -1,8 +1,6 @@
 body,
 html {
-    /* max-width: 1440px; */
     margin: 0 auto;
-    /* overflow: scroll; */
 }
 
 body {
@@ -16,7 +14,5 @@ body::-webkit-scrollbar {
 }
 
 ul.react-multi-carousel-dot-list {
-    /* background: purple; */
     position: relative;
-    /* top: 10px; */
 }

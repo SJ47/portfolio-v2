@@ -16,7 +16,6 @@ import DeveloperModeOutlinedIcon from "@mui/icons-material/DeveloperModeOutlined
 import { NavHashLink as Link } from "react-router-hash-link";
 
 const drawerWidth = 240;
-// const drawerLogo = true;
 
 const Drawer = ({ Logo, theme, handleMenuItemChange }) => {
     const scrollWithOffset = (el, offset) => {
@@ -92,7 +91,6 @@ const Drawer = ({ Logo, theme, handleMenuItemChange }) => {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {/* {["My Services", "About Me", "My Projects", "Contact"].map( */}
                     {["Services", "About", "Projects", "Contact"].map(
                         (text, index) => (
                             <ListItem

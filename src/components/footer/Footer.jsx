@@ -28,7 +28,6 @@ const Footer = ({ introImage, handleMessageSentStatus }) => {
                 <Box
                     sx={{
                         boxShadow: 12,
-                        // bgcolor: "primary.main",
                         display: "flex",
                         flexDirection: { md: "row", xs: "column" },
                         justifyContent: "space-between",
@@ -75,7 +74,6 @@ const Footer = ({ introImage, handleMessageSentStatus }) => {
                                 >
                                     <LinkedInIcon
                                         sx={{
-                                            // color: "primary.main",
                                             fontSize: "2.5rem",
                                         }}
                                     />
@@ -92,7 +90,6 @@ const Footer = ({ introImage, handleMessageSentStatus }) => {
                                 >
                                     <GitHubIcon
                                         sx={{
-                                            // color: "primary.main",
                                             fontSize: "2.5rem",
                                         }}
                                     />
@@ -109,7 +106,6 @@ const Footer = ({ introImage, handleMessageSentStatus }) => {
                                 >
                                     <TwitterIcon
                                         sx={{
-                                            // color: "primary.main",
                                             fontSize: "2.5rem",
                                         }}
                                     />
@@ -126,7 +122,6 @@ const Footer = ({ introImage, handleMessageSentStatus }) => {
                                 >
                                     <CodeIcon
                                         sx={{
-                                            // color: "primary.main",
                                             fontSize: "2.5rem",
                                         }}
                                     />
@@ -141,25 +136,13 @@ const Footer = ({ introImage, handleMessageSentStatus }) => {
                                 >
                                     <EmailIcon
                                         sx={{
-                                            // color: "primary.main",
                                             fontSize: "2.5rem",
                                         }}
                                     />
                                 </ListItemButton>
                             </Tooltip>
                         </List>
-                        {/* <Divider variant="middle" light="true" /> */}
-                        {/* <Typography
-                            sx={{
-                                fontSize: "1.2rem",
-                                color: "primary.contrastText",
-                                m: 4,
-                                textAlign: "left",
-                            }}
-                        >
-                            Please feel free to reach out and connect with me
-                            using any of the services above
-                        </Typography> */}
+
                         <StyledImage
                             src={introImage}
                             alt="scott"

@@ -7,9 +7,6 @@ export const StyledH2 = styled("h2")`
     letter-spacing: .05em;
     color: ${props => props.theme.palette.grey[100]};
 
-    /* color: ${props => props.theme.palette.text.primary}; */
-    
-
     // Desktop view
     ${props => props.theme.breakpoints.up("sm")} {
         margin-top: .5em;
@@ -34,7 +31,6 @@ export const StyledParagraph = styled(Box)`
 `;
 
 export const StyledBox = styled(Box)`
-    /* background: ${props => props.theme.palette.primary.main}; */
     position: relative;
     top: -35px;
     z-index: 1;
