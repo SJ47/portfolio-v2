@@ -5,10 +5,11 @@ import { AppBar, useMediaQuery } from "@mui/material";
 import Drawer from "../drawer/Drawer";
 import Logo from "../logo/Logo";
 import Switch from "../switch/Switch";
-
 import { NavHashLink as Link } from "react-router-hash-link";
+import { useTheme } from "@mui/material/styles";
 
-const Header = ({ theme, handleThemeSwitch, handleMenuItemChange, menuItem }) => {
+const Header = ({ handleMenuItemChange, menuItem }) => {
+    const theme = useTheme();
     const showText = useMediaQuery(theme.breakpoints.down("sm"));
 
     // Mui Tabs takes in event and newValue.
@@ -104,7 +105,7 @@ const Header = ({ theme, handleThemeSwitch, handleMenuItemChange, menuItem }) =>
                         </StyledTabs>
                     )}
                     {showText && <Logo />}
-                    <Switch handleThemeSwitch={handleThemeSwitch} />
+                    <Switch />
                 </StyledToolBar>
             </AppBar>
         </>

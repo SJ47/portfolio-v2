@@ -3,8 +3,11 @@ import React from "react";
 import { StyledImage, StyledParagraph, StyledH1 } from "./Intro.styled";
 
 import { StyledIntroContainer } from "../container/Container";
+import { useTheme } from "@mui/material/styles";
 
-const Intro = ({ theme, introImage }) => {
+const Intro = ({ introImage }) => {
+    const theme = useTheme();
+
     const showText = useMediaQuery(theme.breakpoints.down("sm"));
 
     return (

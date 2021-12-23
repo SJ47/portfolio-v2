@@ -47,7 +47,7 @@ const responsive = {
 };
 
 // Function component
-const Carousel = ({ projectData, theme }) => {
+const Carousel = ({ projectData }) => {
     const [expanded, setExpanded] = useState([]);
 
     const handleExpandClick = (index) => {

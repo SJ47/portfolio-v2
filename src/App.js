@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -16,6 +16,8 @@ const lightTheme = createTheme({
     mode: "light",
   },
 });
+
+export const HandleThemeSwitchContext = createContext();
 
 function App() {
   const [theme, setTheme] = useState(darkTheme);
@@ -49,10 +51,9 @@ function App() {
       <Router>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <AppContainer
-            handleThemeSwitch={handleThemeSwitch}
-            theme={theme}
-          />
+          <HandleThemeSwitchContext.Provider value={handleThemeSwitch}>
+            <AppContainer />
+          </HandleThemeSwitchContext.Provider>
         </ThemeProvider>
       </Router>
     </>

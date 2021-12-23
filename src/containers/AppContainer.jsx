@@ -14,7 +14,7 @@ import StyledContainer from "../components/container/Container";
 
 import projectData from "../assets/data/data.json";
 
-const AppContainer = ({ handleThemeSwitch, theme }) => {
+const AppContainer = () => {
     // Handle active menu selected
     const [menuItem, setMenuItem] = useState("/services");
     const [messageSent, setMessageSent] = useState(false);
@@ -30,16 +30,14 @@ const AppContainer = ({ handleThemeSwitch, theme }) => {
     return (
         <>
             <Header
-                theme={theme}
-                handleThemeSwitch={handleThemeSwitch}
                 handleMenuItemChange={handleMenuItemChange}
                 menuItem={menuItem}
             />
             <StyledContainer>
-                <Intro theme={theme} introImage={introImage} />
+                <Intro introImage={introImage} />
                 <WhatIDo />
                 <WhoIAm />
-                <Projects theme={theme} projectData={projectData} />
+                <Projects projectData={projectData} />
                 <Footer
                     introImage={introImage}
                     handleMessageSentStatus={handleMessageSentStatus}

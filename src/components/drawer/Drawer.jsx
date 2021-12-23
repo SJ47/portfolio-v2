@@ -17,7 +17,7 @@ import { NavHashLink as Link } from "react-router-hash-link";
 
 const drawerWidth = 240;
 
-const Drawer = ({ Logo, theme, handleMenuItemChange }) => {
+const Drawer = ({ Logo, handleMenuItemChange }) => {
     const scrollWithOffset = (el, offset) => {
         const elementPosition = el.offsetTop - offset;
         window.scroll({
