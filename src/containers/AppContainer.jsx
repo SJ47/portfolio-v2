@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import introImage from "../assets/images/sj-photo.png";
 import Header from "../components/header/Header";
 import Intro from "../components/intro/Intro";
@@ -26,6 +26,28 @@ const AppContainer = () => {
     const handleMessageSentStatus = () => {
         setMessageSent(false);
     };
+
+    // Waken up project pages stored in Heroku free subscription as they sleep after 30 mins
+    useEffect(() => {
+        projectData.map((project) => {
+            if (project.liveAppLink.includes("herokuapp.com")) {
+                // console.log("Fetching: ", project.liveAppLink);
+                const projectWebPage = project.liveAppLink;
+                fetch(projectWebPage, {
+                    mode: "no-cors",
+                });
+            } else if (project.liveAppLink.includes("foodee")) {
+                // console.log("Fetching: foodee-client.herokuapp.com");
+                fetch("https://foodee-client.herokuapp.com", {
+                    mode: "no-cors",
+                });
+                // console.log("Fetching: foodee-service.herokuapp.com");
+                fetch("https://foodee-service.herokuapp.com/payments", {
+                    mode: "no-cors",
+                });
+            }
+        });
+    }, []);
 
     return (
         <>
