@@ -26,7 +26,7 @@ function App() {
     setTheme(theme === darkTheme ? lightTheme : darkTheme);
   };
 
-  // Check for existing theme saved in browser localstorage
+  // Check for existing theme saved in browser localstorage 
   useEffect(() => {
     if (localStorage.themeScottJohnstonDev === "dark") {
       setTheme(darkTheme);
