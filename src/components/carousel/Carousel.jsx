@@ -462,6 +462,8 @@ const Carousel = ({ projectData }) => {
                 centerMode={false}
                 slidesToSlide={1}
                 renderDotsOutside={true}
+                autoPlay={false}
+                shouldResetAutoplay={true}
             >
                 {itemList}
             </StyledCarousel>

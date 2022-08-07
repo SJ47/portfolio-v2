@@ -1,5 +1,35 @@
 [
     {
+        "id": 1,
+        "projectName": "Foodee",
+        "projectTitle": "Foodee App",
+        "projectTeam": "Group Project",
+        "subtitle": "A food & drink table service ordering app",
+        "category": "App",
+        "techDescription": "Java | Spring Framework | React | JavaScript | HTML | CSS | Leaflet.js | Stripe Payments",
+        "link": "/foodee",
+        "gitHubLink": "https://github.com/SJ47/foodee",
+        "liveAppLink": "https://foodee.scottjohnston.dev",
+        "image": "../static/images/foodee.png",
+        "brief": "Create a Covid friendly table food and drink ordering web app to allow customers at a bar, pub or restaurant to place food and drink orders from their table.  <p>The customer should also be able to pay using credit card integrating Stripe payment.</p>",
+        "learning": "<p>This was my third and final project whilst studying Professional Software Development with CodeClan.  It was a group project that went from the seedling of an idea to a full working app in the space of just 7 days.</p><p>After creating the brief, MVP and extensions to work on, we started the task of design and planning.  This included database design, front-end design with component diagrams, mock wireframe diagrams and mood boards.</p><p>In the Java back-end, I got to work on and improve my skills with derived queries, JPA and Hibernate, H2 database, annotations and restful routes.</p><p>In the front-end, I gained more experience using React and JavaScript and fetching API data from our back-end routes.  I also gained new skills in setting up Stripe payments in both the back-end and front-end for taking credit payments using Stripe APIs. </p><p>Other technical skills and working practices I improved on include using Git for software source control along with an Agile approach to project work, in having daily stand-ups, working from Kanban board for task management, team working with pair-programming along with solo programming.<p>Please feel free to click on the DEMO sign at the top of the page to see the project running live.</p>"
+    },
+    {
+        "id": 10,
+        "projectName": "Slider Puzzle",
+        "projectTitle": "Slider Puzzle Game",
+        "projectTeam": "Solo Project",
+        "subtitle": "A 15 puzzle slider style game",
+        "category": "Game",
+        "techDescription": "React | JavaScript | HTML | CSS | Netlify Hosting | GitHub",
+        "link": "/slider-puzzle-game",
+        "gitHubLink": "https://github.com/SJ47/slider-puzzle-game",
+        "liveAppLink": "https://slider.scottjohnston.dev/",
+        "image": "../static/images/slider-puzzle-game.png",
+        "brief": "Create a classic 15 sliding tile style puzzle game where the player moves numbers around to get them into the correct order. ",
+        "learning": "<p>The object of this project was create the basics of a slider puzzle game that could be used a baseline for growing out this game with additional gaming options or as a template for similar style grid and board games.</p><p>The learning in this project was more about the logic and checking the game play always followed the logic of what is allowed in the game.  For example, keeping track of the space tile and being able to move the space tile by clicking on its surrounding numbers.</p>"
+    },
+    {
         "id": 13,
         "projectName": "New Portfolio Site",
         "projectTitle": "New Portfolio Site Showcase",
@@ -11,7 +41,7 @@
         "gitHubLink": "https://github.com/SJ47/portfolio-v2",
         "liveAppLink": "https://www.scottjohnston.dev/",
         "image": "../static/images/portfolio-v2.png",
-        "brief": "Uising a mobile first approach, create an updated and contemporary portfolio web site showcasing my software development skills, knowledge and projects using MUI and Styled Components.",
+        "brief": "Using a mobile first approach, create an updated and contemporary portfolio web site showcasing my software development skills, knowledge and projects using MUI and Styled Components.",
         "learning": "<p>This was a fun project to update my existing portfolio using both MUI and Styled Components.  <p>This supersedes my existing v1 of my portfolio that you can still find within my project list.</p>The object was simply to design and host a web site portfolio for showcasing my project creations, skills and learning that I have acquired during and after my studying with CodeClan.</p><p>I decided to use React for the front-end for developing my portfolio as I felt this would be best for managing multiple projects.</p><p>I initially hard coded all the project pages and data for each, but it was quickly becoming apparent that for each project I was adding, there was a lot of repeatable code and functionality going on.</p><p>I then decided to refactor the project to use a template style of building the page using a React card layout for each project.  This meant that each project would look similar in the design and layout with all information accessible via the project card such as links to the project live demo, source code and information about the project.</p><p>I was also able to use a JSON data file for storing all the data for each project, which means going forward I just need to add the project information to the JSON file and the project will display and style in my portfolio looking like all the other previous projects without changing any code.</p><p>This project and others showcased are hosted on Netlify, Heroku, Firebase and MongDB Atlas.  This improved my skills and knowledge for hosting web sites on various cloud platforms.</p>"
     },
     {
@@ -45,21 +75,6 @@
         "learning": "<p>The object of this project was get familiar with using Styled Components with React as well as having a little useful app to use when out socialising to calculate a tip and how much each person should pay in your group.</p><p>This project helped me learn how to style a project using Styled Components and enhance my JavaScript and React skills.  I also used this project to improve my CSS skills with regards to the application styling and using a mobile first approach.</p>"
     },
     {
-        "id": 10,
-        "projectName": "Slider Puzzle",
-        "projectTitle": "Slider Puzzle Game",
-        "projectTeam": "Solo Project",
-        "subtitle": "A 15 puzzle slider style game",
-        "category": "Game",
-        "techDescription": "React | JavaScript | HTML | CSS | Netlify Hosting | GitHub",
-        "link": "/slider-puzzle-game",
-        "gitHubLink": "https://github.com/SJ47/slider-puzzle-game",
-        "liveAppLink": "https://slider.scottjohnston.dev/",
-        "image": "../static/images/slider-puzzle-game.png",
-        "brief": "Create a classic 15 sliding tile style puzzle game where the player moves numbers around to get them into the correct order. ",
-        "learning": "<p>The object of this project was create the basics of a slider puzzle game that could be used a baseline for growing out this game with additional gaming options or as a template for similar style grid and board games.</p><p>The learning in this project was more about the logic and checking the game play always followed the logic of what is allowed in the game.  For example, keeping track of the space tile and being able to move the space tile by clicking on its surrounding numbers.</p>"
-    },
-    {
         "id": 9,
         "projectName": "Firebase Auth Demo",
         "projectTitle": "Firebase Authentication",
@@ -74,21 +89,6 @@
         "miniBrief": "Create a demo app module to use Firebase email and password authentication and Firebase Firestore database to store user credentials.  Also have a working option to sign in with Google OAuth 2.0 as an alternative authentication/sign in method.",
         "brief": "Create a demo app module to use Firebase email and password authentication and Firebase Firestore database to store user credentials.  Also have a working option to sign in with Google OAuth 2.0 as an alternative authentication/sign in method.<p>A user should be able to:<ol><li>Create a new account</li> <li>Sign in to their account</li> <li>Reset password via forgot password email to reset</li> <li>Change their email address</li><li>Change their password</li><li>Edit their profile name and picture URL</li><li>View their profile</li><li>Delete their account</li></ol></p>",
         "learning": "<p>The object of this project was create a module for authentication that could be easily imported into any future apps with minimal effort.</p><p>This gave me a good grounding in using Firebase auth and Firestore tools.</p><p>I learned how to use Firebase email and password authentication, where user credentials are stored in the Firebase Firestore database.</p><p>I also learned about using Google OAuth 2.0 for a sign in with Google option.</p><p>Additional knowledge and skills learned during this project included: <ul><li>Working with protected routes (routes locked to authenticated users only)<li>API key handling to keep those keys secret and safe</li><li>Reading, writing and interfacing to the Firestore database</li><li>CSS styling with the Material UI library</li></ul>"
-    },
-    {
-        "id": 1,
-        "projectName": "Foodee",
-        "projectTitle": "Foodee App",
-        "projectTeam": "Group Project",
-        "subtitle": "A food & drink table service ordering app",
-        "category": "App",
-        "techDescription": "Java | Spring Framework | React | JavaScript | HTML | CSS | Leaflet.js | Stripe Payments",
-        "link": "/foodee",
-        "gitHubLink": "https://github.com/SJ47/foodee",
-        "liveAppLink": "https://foodee.scottjohnston.dev",
-        "image": "../static/images/foodee.png",
-        "brief": "Create a Covid friendly table food and drink ordering web app to allow customers at a bar, pub or restaurant to place food and drink orders from their table.  <p>The customer should also be able to pay using credit card integrating Stripe payment.</p>",
-        "learning": "<p>This was my third and final project whilst studying Professional Software Development with CodeClan.  It was a group project that went from the seedling of an idea to a full working app in the space of just 7 days.</p><p>After creating the brief, MVP and extensions to work on, we started the task of design and planning.  This included database design, front-end design with component diagrams, mock wireframe diagrams and mood boards.</p><p>In the Java back-end, I got to work on and improve my skills with derived queries, JPA and Hibernate, H2 database, annotations and restful routes.</p><p>In the front-end, I gained more experience using React and JavaScript and fetching API data from our back-end routes.  I also gained new skills in setting up Stripe payments in both the back-end and front-end for taking credit payments using Stripe APIs. </p><p>Other technical skills and working practices I improved on include using Git for software source control along with an Agile approach to project work, in having daily stand-ups, working from Kanban board for task management, team working with pair-programming along with solo programming.<p>Please feel free to click on the DEMO sign at the top of the page to see the project running live.</p>"
     },
     {
         "id": 2,
