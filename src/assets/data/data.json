@@ -190,7 +190,7 @@
         "techDescription": "Python | Flask | PostgreSQL | HTML | CSS",
         "link": "/rock-paper-scissors-game",
         "gitHubLink": "https://github.com/SJ47/Rock-Paper-Scissors-Game",
-        "liveAppLink": "https://rock-paper-scissors-sj.herokuapp.com/",
+        "liveAppLink": "https://rock-paper-scissors.onrender.com/",
         "image": "../static/images/rock-paper-scissors.png",
         "brief": "Create a simple game of Rock, Paper and Scissors to demonstrate learning of Python and Flask.",
         "learning": "<p>This was a weekend homework exercise during my studying of Professional Software Development with CodeClan.  It was to re-enforce my learning of Python after week 3.</p><p>I decided to complete the MVP and all extensions so that a player could play against the computer.</p><p>This helped improve my understanding of applying logic to the game with regards to the rules of the game and how to check for a winner.</p><p>I improved my skills and understanding with Python and scoping of methods in the class with class methods and static methods.<p>Please feel free to click on the DEMO sign at the top of the page to see the project running live.</p>"
