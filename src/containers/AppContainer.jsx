@@ -26,7 +26,7 @@ const AppContainer = () => {
     const handleMessageSentStatus = () => {
         setMessageSent(false);
     };
-
+    // https://rock-paper-scissors.onrender.com
     // Waken up project pages stored in Heroku free subscription as they sleep after 30 mins
     useEffect(() => {
         projectData.map((project) => {
@@ -43,6 +43,10 @@ const AppContainer = () => {
                 });
                 // console.log("Fetching: foodee-service.herokuapp.com");
                 fetch("https://foodee-service.herokuapp.com/payments", {
+                    mode: "no-cors",
+                });
+            } else if (project.liveAppLink.includes("onrender.com")) {
+                fetch("https://rock-paper-scissors.onrender.com", {
                     mode: "no-cors",
                 });
             }
