@@ -26,8 +26,7 @@ const AppContainer = () => {
     const handleMessageSentStatus = () => {
         setMessageSent(false);
     };
-    // https://rock-paper-scissors.onrender.com
-    // Waken up project pages stored in Heroku free subscription as they sleep after 30 mins
+    // Waken up in advance project any projects stored in hosting sites that put them to sleep after a period of non-activity
     useEffect(() => {
         projectData.map((project) => {
             if (project.liveAppLink.includes("herokuapp.com")) {
