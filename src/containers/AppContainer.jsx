@@ -29,26 +29,27 @@ const AppContainer = () => {
     // Waken up in advance project any projects stored in hosting sites that put them to sleep after a period of non-activity
     useEffect(() => {
         projectData.map((project) => {
-            if (project.liveAppLink.includes("herokuapp.com")) {
-                // console.log("Fetching: ", project.liveAppLink);
-                const projectWebPage = project.liveAppLink;
-                fetch(projectWebPage, {
-                    mode: "no-cors",
-                });
-            } else if (project.liveAppLink.includes("foodee")) {
-                // console.log("Fetching: foodee-client.herokuapp.com");
-                fetch("https://foodee-client.herokuapp.com", {
-                    mode: "no-cors",
-                });
-                // console.log("Fetching: foodee-service.herokuapp.com");
-                fetch("https://foodee-service.herokuapp.com/payments", {
-                    mode: "no-cors",
-                });
-            } else if (project.liveAppLink.includes("onrender.com")) {
+            if (project.liveAppLink.includes("onrender.com")) {
                 fetch("https://rock-paper-scissors.onrender.com", {
                     mode: "no-cors",
                 });
             }
+            // } else if (project.liveAppLink.includes("herokuapp.com")) {
+            //     // console.log("Fetching: ", project.liveAppLink);
+            //     const projectWebPage = project.liveAppLink;
+            //     fetch(projectWebPage, {
+            //         mode: "no-cors",
+            //     });
+            // } else if (project.liveAppLink.includes("foodee")) {
+            //     // console.log("Fetching: foodee-client.herokuapp.com");
+            //     fetch("https://foodee-client.herokuapp.com", {
+            //         mode: "no-cors",
+            //     });
+            //     // console.log("Fetching: foodee-service.herokuapp.com");
+            //     fetch("https://foodee-service.herokuapp.com/payments", {
+            //         mode: "no-cors",
+            //     });
+            // }
         });
     }, []);
 
