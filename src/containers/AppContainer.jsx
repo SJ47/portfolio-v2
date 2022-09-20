@@ -33,6 +33,9 @@ const AppContainer = () => {
                 fetch("https://rock-paper-scissors.onrender.com", {
                     mode: "no-cors",
                 });
+                fetch("https://sports-scoring-app.onrender.com", {
+                    mode: "no-cors",
+                });
             }
             // } else if (project.liveAppLink.includes("herokuapp.com")) {
             //     // console.log("Fetching: ", project.liveAppLink);

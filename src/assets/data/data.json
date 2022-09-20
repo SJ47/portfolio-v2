@@ -189,7 +189,7 @@
         "category": "Game",
         "techDescription": "Python | Flask | PostgreSQL | HTML | CSS",
         "link": "/rock-paper-scissors-game",
-        "gitHubLink": "https://github.com/SJ47/Rock-Paper-Scissors-Game",
+        "gitHubLink": "https://github.com/SJ47/rock-paper-scissors",
         "liveAppLink": "https://rock-paper-scissors.onrender.com/",
         "image": "../static/images/rock-paper-scissors.png",
         "brief": "Create a simple game of Rock, Paper and Scissors to demonstrate learning of Python and Flask.",
